@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kbeiwa Lel Tanjeed | لتنجيد الأثاث الملكي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #AA7C11;
+            --black: #111111;
+            --light-black: #1a1a1a;
+            --white: #ffffff;
+            --gray: #aaaaaa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: var(--light-black);
+            border-bottom: 2px solid var(--gold);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: var(--gold);
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--gold);
+        }
+
+        /* Mobil Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: var(--gold);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('WhatsApp Image 2026-07-06 at 9.10.10 PM (3).jpeg') no-repeat center center/cover;
+            border-bottom: 1px solid var(--dark-gold);
+        }
+
+        .hero h1 {
+            color: var(--gold);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: var(--gray);
+        }
+
+        /* Sections General */
+        .page-section {
+            padding: 40px 5%;
+            display: none;
+        }
+
+        .page-section.active-section {
+            display: block;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold);
+            font-size: 26px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 8px auto 0;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            background-color: var(--light-black);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .gallery-item:hover {
+            border-color: var(--gold);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .item-details {
+            padding: 15px;
+        }
+
+        .item-details h3 {
+            color: var(--gold);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--light-black);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info i {
+            font-size: 26px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            color: var(--white);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--light-black);
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #333;
+            margin-top: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background-color: var(--light-black);
+                flex-direction: column;
+                align-items: center;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+                border-bottom: 1px solid var(--gold);
+            }
+
+            .nav-links.show {
+                max-height: 150px;
+                padding: 15px 0;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 60px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a class="logo" href="#">Kbeiwa Lel Tanjeed</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a onclick="switchPage('home')" id="nav-home" class="active">الرئيسية والمعرض</a></li>
+            <li><a onclick="switchPage('contact')" id="nav-contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <div id="home-page" class="page-section active-section">
+        <header class="hero">
+            <h1>Kbeiwa Lel Tanjeed</h1>
+            <p>نحول أثاثك إلى قطعة ملكية</p>
+        </header>
+
+        <main style="margin-top: 30px;">
+            <h2 class="section-title">معرض أعمالنا الفاخرة</h2>
+            
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-07-06 at 9.10.11 PM (3).jpeg" alt="طقم ملكي">
+                    <div class="item-details">
+                        <h3>طقم صالون ملوكي مذهب</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-07-06 at 9.10.11 PM.jpeg" alt="طقم ملكي">
+                    <div class="item-details">
+                        <h3>طقم صالون ملوكي مذهب</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-07-06 at 9.10.10 PM.jpeg" alt="كنبة مريحة">
+                    <div class="item-details">
+                        <h3>كنبة مريحة كلاسيكية فاخرة</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-07-06 at 9.10.10 PM (1).jpeg" alt="طقم جديد 1">
+                    <div class="item-details">
+                        <h3>طقم صالون عصري فاخر</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-07-06 at 9.10.12 PM.jpeg" alt="طقم جديد 2">
+                    <div class="item-details">
+                        <h3>كرسي صالون ملكي أنيق</h3>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <div id="contact-page" class="page-section">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>موقعنا</h3>
+                <p>الجمهورية العربية السورية، مدينة حلب</p>
+            </div>
+           
+            <div class="contact-info">
+                <i class="fa-solid fa-phone"></i>
+                <h3>رقم الهاتف</h3>
+                <p dir="ltr">+963 0969 139 405</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kbeiwa Lel Tanjeed - حلب، سوريا.</p>
+    </footer>
+
+    <script>
+        // Mobil Menü Açma/Kapama
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
+        // Sayfa geçişleri
+        function switchPage(page) {
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active-section'));
+            document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+
+            if (page === 'home') {
+                document.getElementById('home-page').classList.add('active-section');
+                document.getElementById('nav-home').classList.add('active');
+            } else if (page === 'contact') {
+                document.getElementById('contact-page').classList.add('active-section');
+                document.getElementById('nav-contact').classList.add('active');
+            }
+
+            // Mobilde tıklandığında menüyü otomatik kapat
+            document.getElementById('navLinks').classList.remove('show');
+        }
+    </script>
+</body>
+</html>
