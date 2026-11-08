@@ -80,7 +80,7 @@
         .hero {
             text-align: center;
             padding: 80px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('WhatsApp Image 2026-07-06 at 9.10.10 PM (3).jpeg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://i.ibb.co/G4mM3L6R/WhatsApp-Image-2026-07-06-at-9-10-10-PM-3.jpg') no-repeat center center/cover;
             border-bottom: 1px solid var(--dark-gold);
         }
 
@@ -262,38 +262,35 @@
             
             <div class="gallery-grid">
                 
+                <!-- 1. Fotoğraf -->
                 <div class="gallery-item">
-                    <img src="https://ibb.co/G4mM3L6R" alt="طقم ملكي">
+                    <img src="https://i.ibb.co/G4mM3L6R/WhatsApp-Image-2026-07-06-at-9-10-10-PM-3.jpg" alt="طقم ملكي">
                     <div class="item-details">
                         <h3>طقم صالون ملوكي مذهب</h3>
                     </div>
                 </div>
 
+                <!-- 2. Fotoğraf -->
                 <div class="gallery-item">
-                    <img src="https://ibb.co/N2GbS2JM" alt="طقم ملكي">
+                    <img src="https://i.ibb.co/N2GbS2JM/WhatsApp-Image-2026-07-06-at-9-10-11-PM-3.jpg" alt="طقم ملكي">
                     <div class="item-details">
                         <h3>طقم صالون ملوكي مذهب</h3>
                     </div>
                 </div>
 
+                <!-- 3. Fotoğraf -->
                 <div class="gallery-item">
-                    <img src="https://ibb.co/0jtTn7DL" alt="كنبة مريحة">
+                    <img src="https://i.ibb.co/0jtTn7DL/WhatsApp-Image-2026-07-06-at-9-10-10-PM.jpg" alt="كنبة مريحة">
                     <div class="item-details">
                         <h3>كنبة مريحة كلاسيكية فاخرة</h3>
                     </div>
                 </div>
 
+                <!-- 4. Fotoğraf -->
                 <div class="gallery-item">
-                    <img src="" alt="طقم جديد 1">
+                    <img src="https://i.ibb.co/DDL9VHc9/WhatsApp-Image-2026-07-06-at-9-10-12-PM.jpg" alt="طقم عصري">
                     <div class="item-details">
                         <h3>طقم صالون عصري فاخر</h3>
-                    </div>
-                </div>
-
-                <div class="gallery-item">https://ibb.co/DDL9VHc9
-                    <img src="WhatsApp Image 2026-07-06 at 9.10.12 PM.jpeg" alt="طقم جديد 2">
-                    <div class="item-details">
-                        <h3>كرسي صالون ملكي أنيق</h3>
                     </div>
                 </div>
 
@@ -323,13 +320,11 @@
     </footer>
 
     <script>
-        // Mobil Menü Açma/Kapama
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('show');
         }
 
-        // Sayfa geçişleri
         function switchPage(page) {
             document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active-section'));
             document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
@@ -342,7 +337,6 @@
                 document.getElementById('nav-contact').classList.add('active');
             }
 
-            // Mobilde tıklandığında menüyü otomatik kapat
             document.getElementById('navLinks').classList.remove('show');
         }
     </script>
