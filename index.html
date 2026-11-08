@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kbeiwa Lel Tanjeed | لتنجيد الأثاث الملكي</title>
+    
+    <!-- Logonuzu buraya ekleyin (href kısmına ImgBB'den aldığınız DİREKT görsel linkini yapıştırın) -->
+    <link rel="icon" type="image/png" href="BURAYA_DİREKT_GÖRSEL_LİNKİNİ_YAPIŞTIRIN">
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -171,7 +175,6 @@
             opacity: 0;
         }
 
-        /* Kartların sırayla şıkça gelmesi için gecikmeler */
         .gallery-item:nth-child(1) { animation-delay: 0.1s; }
         .gallery-item:nth-child(2) { animation-delay: 0.2s; }
         .gallery-item:nth-child(3) { animation-delay: 0.3s; }
@@ -287,7 +290,7 @@
             .menu-toggle {
                 display: block;
             }
-<link rel="icon"" href="logo.png">
+
             .nav-links {
                 position: absolute;
                 top: 100%;
@@ -433,7 +436,6 @@
             document.getElementById('navLinks').classList.remove('show');
         }
 
-        // Tıklama anında lüks renk saçılma (Ripple) efekti
         document.querySelectorAll('a, .gallery-item').forEach(element => {
             element.addEventListener('click', function (e) {
                 const rect = this.getBoundingClientRect();
